@@ -5,11 +5,16 @@ using UnityEngine;
 
 public class PhotonLogin : MonoBehaviourPunCallbacks
 {
-    [SerializeField] private TMP_Text _photonStatus;
+    //[SerializeField] private TMP_Text _photonStatus;
 
     private void Awake()
     {
         PhotonNetwork.AutomaticallySyncScene = true;
+    }
+
+    private void Start()
+    {
+        Connect();
     }
 
     public void Connect()
@@ -31,8 +36,8 @@ public class PhotonLogin : MonoBehaviourPunCallbacks
 
     private void ChangeUIText(string label, Color color)
     {
-        _photonStatus.text = label;
-        _photonStatus.color = color;
+        //_photonStatus.text = label;
+        //_photonStatus.color = color;
     }
 
     public override void OnDisconnected(DisconnectCause cause)

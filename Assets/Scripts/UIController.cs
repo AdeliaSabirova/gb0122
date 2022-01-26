@@ -32,6 +32,6 @@ public class UIController : MonoBehaviour
 
     private void ConnectToPlayFab()
     {
-        _playFabLogin.LoginPlayFab();
+        //_playFabLogin.LoginPlayFab();
     }
 }
