@@ -1,0 +1,483 @@
+{
+  "CatalogVersion": "1.0",
+  "Catalog": [
+    {
+      "ItemId": "rake_m_1",
+      "ItemClass": "Rake",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Metal Rake",
+      "Description": "Metal rake with X2 exps",
+      "VirtualCurrencyPrices": {
+        "GC": 1000
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "rake",
+        "equipment"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "rake_s_1",
+      "ItemClass": "Rake",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Silver Rake",
+      "Description": "Silver rake with X5 exps",
+      "VirtualCurrencyPrices": {
+        "GC": 2500
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "rake",
+        "equipment"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "rake_g_1",
+      "ItemClass": "Rake",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Golden Rake",
+      "Description": "Golden rake with X10 exps",
+      "VirtualCurrencyPrices": {
+        "GC": 5000
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "rake",
+        "equipment"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "cape_1",
+      "ItemClass": "Cape",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Unharmed Cape 1",
+      "Description": "Unharmed cape, when it is on then no harm happens to character\n5 minutes",
+      "VirtualCurrencyPrices": {
+        "GC": 500
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "cape",
+        "unharmed",
+        "clothes",
+        "time"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": 300,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "cape_2",
+      "ItemClass": "Cape",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Unharmed Cape 2",
+      "Description": "Unharmed cape, when it is on then no harm happens to character.\n15 minutes",
+      "VirtualCurrencyPrices": {
+        "GC": 1250
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "cape",
+        "unharmed",
+        "clothes",
+        "time"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": 900,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "cape_3",
+      "ItemClass": "Cape",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Unharmed Cape 3",
+      "Description": "Unharmed cape, when it is on then no harm happens to character\n30 minutes",
+      "VirtualCurrencyPrices": {
+        "GC": 3000
+      },
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "cape",
+        "unharmed",
+        "clothes",
+        "time"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": 1800,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "exp_x2",
+      "ItemClass": "Exp",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Exp X2",
+      "Description": "Experience with x2",
+      "VirtualCurrencyPrices": {
+        "GC": 500
+      },
+      "RealCurrencyPrices": null,
+      "Tags": [
+        "exp",
+        "time"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": 600,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "life_infinite_1",
+      "ItemClass": "Lifes",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Infinite lifes 1",
+      "Description": null,
+      "VirtualCurrencyPrices": {},
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "life",
+        "infinite",
+        "time"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": 300,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "life_infinite_2",
+      "ItemClass": "Lifes",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Infinite lifes 2",
+      "Description": null,
+      "VirtualCurrencyPrices": {},
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "life",
+        "infinite",
+        "time"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": 900,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "life_infinite_3",
+      "ItemClass": "Lifes",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Infinite lifes 3",
+      "Description": null,
+      "VirtualCurrencyPrices": {},
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "life",
+        "infinite",
+        "time"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": 1800,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "life_1",
+      "ItemClass": "Lifes",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Life",
+      "Description": null,
+      "VirtualCurrencyPrices": {
+        "GC": 500
+      },
+      "RealCurrencyPrices": null,
+      "Tags": [
+        "life"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "coins_1",
+      "ItemClass": "Coins",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Golden coins X100",
+      "Description": "100 Golden coins to receive",
+      "VirtualCurrencyPrices": {},
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "coins",
+        "currency"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "coins_2",
+      "ItemClass": "Coins",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Golden coins X500",
+      "Description": "500 Golden coins to receive",
+      "VirtualCurrencyPrices": {},
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "coins",
+        "currency"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    },
+    {
+      "ItemId": "coins_3",
+      "ItemClass": "Coins",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Golden coins X1000",
+      "Description": "1000 Golden coins to receive",
+      "VirtualCurrencyPrices": {},
+      "RealCurrencyPrices": {},
+      "Tags": [
+        "coins",
+        "currency"
+      ],
+      "CustomData": null,
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": false,
+      "ItemImageUrl": null,
+      "IsLimitedEdition": false,
+      "InitialLimitedEditionCount": 0,
+      "ActivatedMembership": null
+    }
+  ],
+  "DropTables": [
+    {
+      "TableId": "drop_table_1",
+      "Nodes": [
+        {
+          "ResultItemType": "ItemId",
+          "ResultItem": "exp_x2",
+          "Weight": 1
+        },
+        {
+          "ResultItemType": "ItemId",
+          "ResultItem": "life_infinite_1",
+          "Weight": 1
+        },
+        {
+          "ResultItemType": "ItemId",
+          "ResultItem": "coins_1",
+          "Weight": 1
+        }
+      ]
+    },
+    {
+      "TableId": "drop_table_2",
+      "Nodes": [
+        {
+          "ResultItemType": "ItemId",
+          "ResultItem": "exp_x2",
+          "Weight": 1
+        },
+        {
+          "ResultItemType": "ItemId",
+          "ResultItem": "life_infinite_2",
+          "Weight": 1
+        },
+        {
+          "ResultItemType": "ItemId",
+          "ResultItem": "coins_2",
+          "Weight": 1
+        }
+      ]
+    },
+    {
+      "TableId": "drop_table_3",
+      "Nodes": [
+        {
+          "ResultItemType": "ItemId",
+          "ResultItem": "exp_x2",
+          "Weight": 1
+        },
+        {
+          "ResultItemType": "ItemId",
+          "ResultItem": "life_infinite_3",
+          "Weight": 1
+        },
+        {
+          "ResultItemType": "ItemId",
+          "ResultItem": "coins_3",
+          "Weight": 1
+        }
+      ]
+    }
+  ]
+}
