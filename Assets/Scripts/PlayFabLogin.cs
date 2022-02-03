@@ -37,6 +37,7 @@ public class PlayFabLogin : MonoBehaviour
 
     public void CreateAccount()
     {
+        _loadingIndication = true;
         PlayFabClientAPI.RegisterPlayFabUser(new RegisterPlayFabUserRequest
         {
             Username = _username,
@@ -46,11 +47,16 @@ public class PlayFabLogin : MonoBehaviour
         }, result =>
         {
             Debug.Log($"Success: {_username}");
+            PlayerPrefs.GetString(AuthUsername, _username);
+            PlayerPrefs.GetString(AuthPassword, _pass);
+            _loadingIndication = false;
+            SceneManager.LoadScene("MainProfile");
         }, OnLoginFailure);
     }
 
     public void Login()
     {
+        _loadingIndication = true;
         PlayFabClientAPI.LoginWithPlayFab(new LoginWithPlayFabRequest
         {
             Username = _username,
