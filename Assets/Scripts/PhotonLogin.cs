@@ -11,6 +11,8 @@ public class PhotonLogin : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject _roomListPanel;
     [SerializeField] private GameObject _joinRandomRoomPanel;
     [SerializeField] private GameObject _createRoomPanel;
+    [SerializeField] private GameObject _credentialsPanel;
+    [SerializeField] private GameObject _storePanel;
 
     [SerializeField] private TMP_InputField _roomName;
     [SerializeField] private TMP_InputField _maxCount;
@@ -37,7 +39,14 @@ public class PhotonLogin : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-        PhotonNetwork.ConnectUsingSettings();
+        if (PhotonNetwork.IsConnected)
+        {
+            PhotonNetwork.JoinRandomRoom();
+        }
+        else
+        {
+            PhotonNetwork.ConnectUsingSettings();
+        }
     }
 
     #endregion
@@ -47,6 +56,7 @@ public class PhotonLogin : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         base.OnConnectedToMaster();
+        PhotonNetwork.JoinRandomRoom();
         Debug.Log("Photon successfully connected");
     }
 
@@ -94,6 +104,8 @@ public class PhotonLogin : MonoBehaviourPunCallbacks
     {
         base.OnJoinedRoom();
         _mainPanel.SetActive(false);
+        _credentialsPanel.SetActive(false);
+        _storePanel.SetActive(false);
         _joinRandomRoomPanel.SetActive(true);
 
         UpdatePlayerListView();
@@ -103,9 +115,9 @@ public class PhotonLogin : MonoBehaviourPunCallbacks
     {
         base.OnJoinRandomFailed(returnCode, message);
 
-        string roomName = "Room " + Random.Range(1000, 10000);
-        RoomOptions options = new RoomOptions { MaxPlayers = 8 };
-        PhotonNetwork.CreateRoom(roomName, options, null);
+        //string roomName = "Room " + Random.Range(1000, 10000);
+        //RoomOptions options = new RoomOptions { MaxPlayers = 8 };
+        //PhotonNetwork.CreateRoom(roomName, options, null);
     }
 
     public override void OnLeftRoom()
@@ -166,7 +178,7 @@ public class PhotonLogin : MonoBehaviourPunCallbacks
 
     public void OnJoinRandomRoomButtonClicked()
     {
-        PhotonNetwork.JoinRandomRoom();
+        PhotonNetwork.JoinRandomOrCreateRoom();
     }
 
     public void OnLeaveRoomButtonClicked()
@@ -229,16 +241,26 @@ public class PhotonLogin : MonoBehaviourPunCallbacks
 
     private void UpdateCachedRoomList(List<RoomInfo> roomList)
     {
-        for (int i = 0; i < roomList.Count; i++)
+        foreach (RoomInfo info in roomList)
         {
-            RoomInfo info = roomList[i];
             if (info.RemovedFromList)
             {
-                _cachedRoomList.Remove(info.Name);
+                if (_cachedRoomList.ContainsKey(info.Name))
+                {
+                    _cachedRoomList.Remove(info.Name);
+                }
+
+                continue;
             }
-            else
+
+            if (_cachedRoomList.ContainsKey(info.Name))
             {
                 _cachedRoomList[info.Name] = info;
+            }
+
+            else
+            {
+                _cachedRoomList.Add(info.Name, info);
             }
         }
     }
