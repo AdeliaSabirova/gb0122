@@ -1200,9 +1200,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1631875033}
+      - m_Target: {fileID: 450179398}
         m_TargetAssemblyTypeName: PhotonLogin, Assembly-CSharp
-        m_MethodName: OpenCreateRoomPanel
+        m_MethodName: OnCreateRoomButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1785,7 +1785,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1631875033}
+      - m_Target: {fileID: 450179398}
         m_TargetAssemblyTypeName: PhotonLogin, Assembly-CSharp
         m_MethodName: OnJoinRandomRoomButtonClicked
         m_Mode: 1
@@ -2831,6 +2831,105 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332060588}
   m_CullTransparentMesh: 1
+--- !u!1 &450179397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 450179402}
+  - component: {fileID: 450179401}
+  - component: {fileID: 450179400}
+  - component: {fileID: 450179399}
+  - component: {fileID: 450179398}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &450179398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450179397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbfc1bbae125d6244bebacc4e370921f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainPanel: {fileID: 302226208}
+  _roomListPanel: {fileID: 185503635}
+  _joinRandomRoomPanel: {fileID: 1445641842}
+  _createRoomPanel: {fileID: 1364711662}
+  _credentialsPanel: {fileID: 701398644}
+  _storePanel: {fileID: 45050821}
+  _roomName: {fileID: 1210387426}
+  _maxCount: {fileID: 1070596182}
+  _isRoomVisible: {fileID: 1867402756}
+  _player: {fileID: 235175486}
+  _room: {fileID: 133445411}
+--- !u!114 &450179399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450179397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 101cabf3669ef84409b625e93cb39962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _element: {fileID: 1002954614}
+--- !u!114 &450179400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450179397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2a63a7b8526b6540813fc03640d3d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _element: {fileID: 141823523}
+--- !u!114 &450179401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450179397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e639c43fd1a036343a6b123d1d2138b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: {fileID: 1804127348}
+  _username: {fileID: 1296204704}
+  _created: {fileID: 2104243766}
+--- !u!4 &450179402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450179397}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &461201091
 GameObject:
   m_ObjectHideFlags: 0
@@ -4632,7 +4731,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2135619729}
+      - m_Target: {fileID: 450179401}
         m_TargetAssemblyTypeName: ProfileManager, Assembly-CSharp
         m_MethodName: DeleteSaved
         m_Mode: 1
@@ -5139,7 +5238,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1631875033}
+      - m_Target: {fileID: 450179398}
         m_TargetAssemblyTypeName: PhotonLogin, Assembly-CSharp
         m_MethodName: OnLeaveRoomButtonClicked
         m_Mode: 1
@@ -7987,7 +8086,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1631875033}
+      - m_Target: {fileID: 450179398}
         m_TargetAssemblyTypeName: PhotonLogin, Assembly-CSharp
         m_MethodName: OnStartGameButtonClicked
         m_Mode: 1
@@ -9089,9 +9188,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1631875033}
+      - m_Target: {fileID: 450179398}
         m_TargetAssemblyTypeName: PhotonLogin, Assembly-CSharp
-        m_MethodName: OnCreateRoomButtonClicked
+        m_MethodName: OnStartGameButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10302,61 +10401,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _character: {fileID: 461201097}
---- !u!1 &1631875030
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1631875032}
-  - component: {fileID: 1631875033}
-  m_Layer: 0
-  m_Name: PhotonLogin
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1631875032
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631875030}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1631875033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1631875030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbfc1bbae125d6244bebacc4e370921f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _mainPanel: {fileID: 302226208}
-  _roomListPanel: {fileID: 185503635}
-  _joinRandomRoomPanel: {fileID: 1445641842}
-  _createRoomPanel: {fileID: 1364711662}
-  _credentialsPanel: {fileID: 701398644}
-  _storePanel: {fileID: 45050821}
-  _roomName: {fileID: 1210387426}
-  _maxCount: {fileID: 1070596182}
-  _isRoomVisible: {fileID: 1867402756}
-  _player: {fileID: 235175486}
-  _room: {fileID: 133445411}
 --- !u!1 &1679292736
 GameObject:
   m_ObjectHideFlags: 0
@@ -10462,7 +10506,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1631875033}
+      - m_Target: {fileID: 450179398}
         m_TargetAssemblyTypeName: PhotonLogin, Assembly-CSharp
         m_MethodName: OnLeaveLobbyButtonClicked
         m_Mode: 1
@@ -11711,7 +11755,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1631875033}
+      - m_Target: {fileID: 450179398}
         m_TargetAssemblyTypeName: PhotonLogin, Assembly-CSharp
         m_MethodName: CloseCreateRoomPanel
         m_Mode: 1
@@ -13162,7 +13206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1631875033}
+      - m_Target: {fileID: 450179398}
         m_TargetAssemblyTypeName: PhotonLogin, Assembly-CSharp
         m_MethodName: OnRoomListButtonClicked
         m_Mode: 1
@@ -13359,9 +13403,6 @@ GameObject:
   - component: {fileID: 2135619726}
   - component: {fileID: 2135619725}
   - component: {fileID: 2135619724}
-  - component: {fileID: 2135619729}
-  - component: {fileID: 2135619728}
-  - component: {fileID: 2135619730}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -13459,44 +13500,3 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &2135619728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2135619723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2a63a7b8526b6540813fc03640d3d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _element: {fileID: 141823523}
---- !u!114 &2135619729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2135619723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e639c43fd1a036343a6b123d1d2138b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _id: {fileID: 1804127348}
-  _username: {fileID: 1296204704}
-  _created: {fileID: 2104243766}
---- !u!114 &2135619730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2135619723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 101cabf3669ef84409b625e93cb39962, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _element: {fileID: 1002954614}
