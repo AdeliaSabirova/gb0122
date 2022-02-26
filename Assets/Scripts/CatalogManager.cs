@@ -12,28 +12,25 @@ public class CatalogManager : MonoBehaviour
 
     private void Start()
     {
-        PlayFabClientAPI.GetCatalogItems(new GetCatalogItemsRequest(), result =>
+        PlayFabClientAPI.GetStoreItems(new GetStoreItemsRequest
         {
-            Debug.Log("Get Catalog Items Success");
-            HandleCatalog(result.Catalog);
+            StoreId = "store_1"
+        }, result =>
+        {
+            HandleStore(result.Store);
         }, error =>
         {
-            Debug.LogError($"Get Catalog Items Failed: {error}");
-        });
+            Debug.LogError($"Get Store Items Failed: {error}");
+        }) ;
     }
 
-    private void HandleCatalog(List<CatalogItem> catalog)
+    private void HandleStore(List<StoreItem> store)
     {
-        foreach (var item in catalog)
+        foreach (var item in store)
         {
-            _catalog.Add(item.ItemId, item);
-            if (item.VirtualCurrencyPrices.ContainsKey("GC"))
-            {
-                Debug.Log($"Item with ID {item.ItemId} was added to dictionary");
-                var element = Instantiate(_element, _element.transform.parent);
-                element.gameObject.SetActive(true);
-                element.SetItem(item);
-            }
+            var element = Instantiate(_element, _element.transform.parent);
+            element.gameObject.SetActive(true);
+            element.SetItem(item);
         }
     }
 }

@@ -35,10 +35,6 @@ public class ProfileManager : MonoBehaviour
         PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("Bootstrap");
     }
-    public void OpenGame()
-    {
-        SceneManager.LoadScene("ExampleScene");
-    }
 
     private void LoadingIndication()
     {
