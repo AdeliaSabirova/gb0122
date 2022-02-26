@@ -1,0 +1,20 @@
+[
+  {
+    "CurrencyCode": "GC",
+    "DisplayName": "Golden Coins",
+    "InitialDeposit": 100,
+    "RechargeRate": 0,
+    "RechargeMax": 0,
+    "CurrencyCodeFull": "GC (Golden Coins)",
+    "GameManagerClassMetadata": null
+  },
+  {
+    "CurrencyCode": "HP",
+    "DisplayName": "Hearts",
+    "InitialDeposit": 5,
+    "RechargeRate": 5,
+    "RechargeMax": 5,
+    "CurrencyCodeFull": "HP (Hearts)",
+    "GameManagerClassMetadata": null
+  }
+]
