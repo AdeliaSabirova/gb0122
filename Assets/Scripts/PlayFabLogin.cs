@@ -13,9 +13,9 @@ public class PlayFabLogin : MonoBehaviour
     private string _mail;
     private string _pass;
 
-    private const string AuthKey = "player-unique-id";
-    private const string AuthUsername = "player-username";
-    private const string AuthPassword = "player-pass";
+    private const string AuthKey = "player-unique-id-auth-key";
+    private const string AuthUsername = "player-username-auth-key";
+    private const string AuthPassword = "player-pass-auth-key";
 
     private bool _loadingIndication = false;
     private bool _loadingAnimation = false;
@@ -47,8 +47,7 @@ public class PlayFabLogin : MonoBehaviour
         }, result =>
         {
             Debug.Log($"Success: {_username}");
-            PlayerPrefs.GetString(AuthUsername, _username);
-            PlayerPrefs.GetString(AuthPassword, _pass);
+            RememberCredentials(_username, _pass);
             _loadingIndication = false;
             SceneManager.LoadScene("MainProfile");
         }, OnLoginFailure);
@@ -63,8 +62,7 @@ public class PlayFabLogin : MonoBehaviour
             Password = _pass
         }, result =>
         {
-            PlayerPrefs.GetString(AuthUsername, _username);
-            PlayerPrefs.GetString(AuthPassword, _pass);
+            RememberCredentials(_username, _pass);
             _loadingIndication = false;
             SceneManager.LoadScene("MainProfile");
         }, OnLoginFailure);
@@ -95,6 +93,34 @@ public class PlayFabLogin : MonoBehaviour
             Debug.Log("Title ID was installed");
         }
 
+        if (PlayerPrefs.HasKey(AuthUsername) && PlayerPrefs.HasKey(AuthPassword))
+        {
+            _loadingIndication = true;
+            PlayFabClientAPI.LoginWithPlayFab(new LoginWithPlayFabRequest
+            {
+                Username = PlayerPrefs.GetString(AuthUsername),
+                Password = PlayerPrefs.GetString(AuthPassword)
+            }, result =>
+            {
+                Debug.Log($"Login Success: {result.PlayFabId}");
+                _loadingIndication = false;
+                SceneManager.LoadScene("MainProfile");
+            }, OnLoginFailure);
+        }
+
+        if (PlayerPrefs.HasKey(AuthKey))
+        {
+            _loadingIndication = true;
+            PlayFabClientAPI.LoginWithCustomID(new LoginWithCustomIDRequest { 
+                CustomId = PlayerPrefs.GetString(AuthKey), 
+                CreateAccount = !PlayerPrefs.HasKey(AuthKey)
+            }, result =>
+            {
+                _loadingIndication = false;
+                SceneManager.LoadScene("MainProfile");
+            },
+        OnLoginFailure);
+        }
     }
     private void LoadingIndication()
     {
@@ -123,6 +149,10 @@ public class PlayFabLogin : MonoBehaviour
         _loadingIndication = false;
         _loadingMessage.text = $"Error... {error}";
     }
-    
 
+    private void RememberCredentials(string username, string pass)
+    {
+        PlayerPrefs.SetString(AuthUsername, username);
+        PlayerPrefs.SetString(AuthPassword, pass);
+    }
 }

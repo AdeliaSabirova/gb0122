@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using Photon.Pun;
 using UnityEngine;
 
 namespace CreatorKitCodeInternal 
@@ -46,6 +47,18 @@ namespace CreatorKitCodeInternal
 
         void Start()
         {
+            var camera = GetComponent<CinemachineVirtualCamera>();
+            var players = FindObjectsOfType<CharacterControl>();
+            foreach (var player in players)
+            {
+                if (player.GetComponent<PhotonView>().IsMine)
+                {
+                    camera.Follow = player.transform;
+                    camera.LookAt = player.transform;
+                    break;
+                }
+            }
+
             Zoom(0);
         }
 

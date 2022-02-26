@@ -160,6 +160,11 @@ namespace CreatorKitCode
             CurrentHealth = stats.health;
             m_Owner = owner;
         }
+
+        public void InitHealth(int health)
+        {
+            CurrentHealth = health;
+        }
     
         /// <summary>
         /// Add a modifier to the end of the stack. This will recompute the Stats so it now include the new modifier.

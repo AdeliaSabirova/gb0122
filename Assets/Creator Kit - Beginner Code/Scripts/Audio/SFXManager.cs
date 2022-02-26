@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using CreatorKitCode;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using CreatorKitCodeInternal;
+using Photon.Pun;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -79,6 +81,19 @@ namespace CreatorKitCode
             }
         }
 
+        private void Start()
+        {
+            var players = FindObjectsOfType<CharacterControl>();
+            foreach (var player in players)
+            {
+                if (player.GetComponent<PhotonView>().IsMine)
+                {
+                    ListenerTarget = player.transform;
+                    break;
+                }
+            }
+        }
+
         void Reset()
         {
             m_Prefabs = new AudioSource[Enum.GetValues(typeof(Use)).Length];
@@ -87,6 +102,11 @@ namespace CreatorKitCode
 
         void Update()
         {
+            if(ListenerTarget == null)
+            {
+                return;
+            }
+
             Listener.transform.position = ListenerTarget.transform.position;
         }
 

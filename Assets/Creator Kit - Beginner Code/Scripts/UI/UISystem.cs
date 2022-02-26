@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using CreatorKitCode;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -44,6 +45,15 @@ namespace CreatorKitCodeInternal
 
         void Start()
         {
+            var players = FindObjectsOfType<CharacterControl>();
+            foreach(var player in players)
+            {
+                if (player.GetComponent<PhotonView>().IsMine)
+                {
+                    PlayerCharacter = player;
+                    break;
+                }
+            }
             m_ClosedInventorySprite = ((Image)OpenInventoryButton.targetGraphic).sprite;
             m_OpenInventorySprite = OpenInventoryButton.spriteState.pressedSprite;
 
@@ -61,6 +71,11 @@ namespace CreatorKitCodeInternal
         // Update is called once per frame
         void Update()
         {
+            if(PlayerCharacter == null)
+            {
+                return;
+            }
+
             UpdatePlayerUI();
         }
 
